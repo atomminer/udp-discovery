@@ -1,0 +1,32 @@
+{
+  "name": "udp-discovery",
+  "version": "0.0.2",
+  "description": "UDP client and server for service discovery inside the local network",
+  "main": "index.js",
+  "engines": {
+    "node": ">=10"
+  },
+  "contributors": [
+    {
+      "name": "AtomMiner",
+      "email": "atom@atomminer.com",
+      "url": "https://atomminer.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atomminer/udp-discovery.git"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js",
+    "docs": "jsdoc2md-treegen"
+  },
+  "keywords": [
+    "UDP",
+    "discovery"
+  ],
+  "author": "AtomMiner",
+  "license": "MIT"
+}
