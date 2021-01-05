@@ -55,7 +55,6 @@ class Server extends DiscoveryClient.Discover {
 		// When the EventEmitter object emits an event, all of the functions attached to that specific 
 		// event are called synchronously. Any values returned by the called listeners are ignored and discarded.
 		// hacky solution, but let it be
-		const incoming = msg.toString();
 		const obj =  {msg: msg.toString(), info};
 		this.emit('message', obj);
 	}

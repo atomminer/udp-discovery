@@ -71,12 +71,12 @@ class Discover extends EventEmitter {
 		if(typeof configOrPort === 'object') {
 			this.opts = {...defaultDiscoverOpts, ...configOrPort};
 		}
-		else if((typeof configOrPort === 'number' && isFinite(configOrPort)) || configOrPort === null || configOrPort === undefined) {
+		else if(isFinite(configOrPort) || configOrPort === undefined) {
 			this.opts = defaultDiscoverOpts;
 			if(typeof configOrPort === 'number') this.opts.port = configOrPort;
 		}
 		else throw new Error('Discover() configOrPort must be either object or  port number');
-		if(this.opts.port < 1 && this.opts.port > 65535) throw new Error('Discover() port must n the [1-65535] range');
+		if(this.opts.port < 1 || this.opts.port > 65535) throw new Error('Discover() port must n the [1-65535] range');
 		this._running = false;
 		this._socket = null;
 		this._address = null;
